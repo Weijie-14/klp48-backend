@@ -1,0 +1,27 @@
+{
+  "name": "klp48-backend",
+  "version": "1.0.0",
+  "description": "backend for klp48",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Weijie-14/klp48-backend.git"
+  },
+  "keywords": [
+    "backend",
+    "express",
+    "mysql"
+  ],
+  "author": "Weijie-14",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Weijie-14/klp48-backend/issues"
+  },
+  "homepage": "https://github.com/Weijie-14/klp48-backend#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
