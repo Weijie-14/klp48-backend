@@ -19,19 +19,29 @@ repositories {
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-jdbc")
-	implementation("org.springframework.boot:spring-boot-starter-oauth2-authorization-server")
-	implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
-	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.springframework.boot:spring-boot-starter-web")
-	implementation("org.springframework.boot:spring-boot-starter-websocket")
-	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+	implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
+	implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
+	implementation("org.springframework.boot:spring-boot-starter-security")
+	implementation("org.springframework.security:spring-security-crypto")
+	implementation("org.springframework.boot:spring-boot-starter-validation")
+	implementation(platform("org.mongodb:mongodb-driver-bom:5.4.0"))
+	implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
-	runtimeOnly("com.mysql:mysql-connector-j")
+	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
+	implementation("org.mongodb:mongodb-driver-kotlin-coroutine")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("io.projectreactor:reactor-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
+	testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test")
 	testImplementation("org.springframework.security:spring-security-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+	implementation("org.mongodb:bson-kotlinx:5.4.0")
+
+	compileOnly("jakarta.servlet:jakarta.servlet-api:6.1.0")
+	implementation("io.jsonwebtoken:jjwt-api:0.12.6")
+	runtimeOnly("io.jsonwebtoken:jjwt-impl:0.12.6")
+	runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.12.6")
 }
 
 kotlin {
